@@ -9,11 +9,11 @@ import org.hexworks.zircon.api.data.Tile
 import org.hexworks.zircon.api.grid.TileGrid
 
 class DisplayController(tileGrid: TileGrid) {
-    val gameScreen = Screens.createScreenFor(tileGrid)
+    private val gameScreen = Screens.createScreenFor(tileGrid)
 
-    val gameLayer = gameScreen.layers.first()
+    private val gameLayer = gameScreen.layers.first()
 
-    val snakeTile = snakeTile()
+    private val snakeTile = snakeTile()
 
     fun draw() {
         gameLayer.setTileAt(Position.create(2, 3), snakeTile)
